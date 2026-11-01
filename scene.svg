@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" role="img" aria-label="Records office: a reed pen crosses a blank sheet while rolls rest in their cubbies">
+<rect width="1200" height="340" fill="#3d3a30"/>
+<g fill="#2c2820">
+<rect x="30" y="26" width="520" height="150"/><rect x="650" y="26" width="520" height="150"/>
+</g>
+<g fill="#e6dcc0">
+<rect x="52" y="48" width="86" height="30" rx="15"/><rect x="160" y="48" width="86" height="30" rx="15"/><rect x="268" y="48" width="86" height="30" rx="15"/><rect x="376" y="48" width="86" height="30" rx="15"/>
+<rect x="52" y="118" width="86" height="30" rx="15"/><rect x="160" y="118" width="86" height="30" rx="15"/><rect x="268" y="118" width="86" height="30" rx="15"/>
+<rect x="672" y="48" width="86" height="30" rx="15"/><rect x="780" y="48" width="86" height="30" rx="15"/><rect x="888" y="48" width="86" height="30" rx="15"/>
+<rect x="672" y="118" width="86" height="30" rx="15"/><rect x="780" y="118" width="86" height="30" rx="15"/><rect x="888" y="118" width="86" height="30" rx="15"/>
+</g>
+<g>
+<rect x="996" y="118" width="86" height="30" rx="15" fill="#e6dcc0">
+<animate attributeName="y" values="118;118;124;124" keyTimes="0;0.7;0.78;1" dur="24s" repeatCount="indefinite"/>
+</rect>
+</g>
+<rect x="0" y="196" width="1200" height="144" fill="#9c927c"/>
+<rect x="330" y="222" width="480" height="96" fill="#f4eedc"/>
+<g>
+<animateTransform attributeName="transform" type="translate" values="0,0; 60,0; 60,0; 130,4; 130,4; 210,2; 210,2; 300,6; 300,6; 380,4; 380,4" keyTimes="0;0.12;0.24;0.36;0.48;0.58;0.68;0.78;0.86;0.94;1" dur="18s" repeatCount="indefinite"/>
+<line x1="368" y1="292" x2="452" y2="228" stroke="#b08d4e" stroke-width="11" stroke-linecap="round"/>
+<polygon points="452,228 470,210 458,204 442,220" fill="#2c241a"/>
+</g>
+<g>
+<ellipse cx="1010" cy="292" rx="72" ry="26" fill="#57503c"/>
+<ellipse cx="1010" cy="288" rx="56" ry="19" fill="#17150f"/>
+<ellipse cx="986" cy="282" rx="20" ry="6" fill="#f7efc8" opacity="0.5">
+<animate attributeName="cx" values="978;1042;978" dur="9s" repeatCount="indefinite"/>
+</ellipse>
+<circle cx="1010" cy="238" r="5" fill="#17150f" opacity="0">
+<animate attributeName="opacity" values="0;0;1;0" keyTimes="0;0.9;0.96;1" dur="18s" repeatCount="indefinite"/>
+<animate attributeName="cy" values="238;282" keyTimes="0.9;1" dur="18s" repeatCount="indefinite"/>
+</circle>
+</g>
+</svg>

@@ -3,145 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MIT License Host: what it is, how it runs, where it stops</title>
-<meta name="description" content="MIT License Host is one of my projects. The README in the repo is short, so this page sticks to what the files themselves show.">
+<title>MIT-License-Host: the copying desk</title>
+<meta name="description" content="One canonical copy of the MIT licence, kept on a desk where anyone can read it, copy it, or download it.">
 <style>
-:root {
-  --bg: #1a0c0c; --panel: #2a1412; --ink: #f0e6d6;
-  --mut: #381b18;
-  --acc: #c9a24b; --acc2: #94b2c4;
-  --line: #2a1412;
-}
-* { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink);
-  font-family: 'Trebuchet MS', sans-serif; line-height: 1.55; }
-code, pre, .mono { font-family: 'Courier New', monospace; }
-a { color: var(--acc2); }
-.hero { padding: 3rem 6vw 1rem; }
-.hero img.banner { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; }
-.logo { width: 92px; height: 92px; border-radius: 18px;
-  border: 1px solid var(--line); }
-h1 { font-size: 2.4rem; margin: 0.4em 0 0.1em; }
-h2 { border-bottom: 2px solid var(--acc); padding-bottom: 0.2em;
-  margin-top: 2em; }
-.lede { font-size: 1.15rem; max-width: 62ch; }
-main { padding: 0 6vw 3rem; max-width: 1180px; margin: 0 auto; }
-.grid { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
-.card { background: var(--panel); border: 1px solid var(--line);
-  border-radius: 12px; padding: 1rem 1.2rem; }
-.card.pop { animation: rise 0.7s ease both; }
-@keyframes rise { from { opacity: 0; transform: translateY(14px); }
-  to { opacity: 1; transform: none; } }
-pre.code { background: #101014; color: #e8e6df; padding: 1rem 1.2rem;
-  border-radius: 12px; overflow-x: auto; font-size: 0.86rem;
-  border-left: 5px solid var(--acc); }
-table { border-collapse: collapse; width: 100%; }
-td, th { border-bottom: 1px solid var(--line); padding: 0.45rem 0.6rem;
-  text-align: left; }
-.shots { display: grid; gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-.shots img { width: 100%; height: auto; border: 1px solid var(--line);
-  border-radius: 10px; background: #f4f1e8; }
-footer { padding: 2rem 6vw; border-top: 1px solid var(--line);
-  color: var(--mut); }
-.rail { display: flex; gap: 1.2rem; align-items: flex-start; }
-.rail nav { position: sticky; top: 1rem; min-width: 180px; }
-@media (max-width: 760px) { .rail { flex-direction: column; }
-  .rail nav { position: static; } }
-@media (prefers-reduced-motion: reduce) {
-  .card.pop { animation: none; } * { scroll-behavior: auto; } }
+@font-face{font-family:'Bad Script';src:url('fonts/BadScript-Regular.ttf') format('truetype')}
+@font-face{font-family:'Archivo';src:url('fonts/Archivo-Regular.ttf') format('truetype')}
+*{box-sizing:border-box}
+body{margin:0;background:#3d3a30;color:#ece5d2;font-family:'Archivo',sans-serif;line-height:1.6}
+header{max-width:1020px;margin:0 auto;padding:36px 22px 4px}
+header img{width:100%;height:auto;display:block}
+h1,h2{font-family:'Bad Script',cursive;font-weight:400;color:#f0e9d6}
+h1{font-size:2rem;margin:18px 0 2px}
+h2{font-size:1.5rem;margin:0 0 10px}
+main{max-width:1020px;margin:0 auto;padding:10px 22px 30px}
+.desk{display:grid;grid-template-columns:1fr 240px;gap:22px;align-items:start}
+@media(max-width:760px){.desk{grid-template-columns:1fr}}
+.sheet{background:#f4eedc;color:#2c2820;padding:30px 34px;border-top:6px solid #2f4a34}
+.sheet pre{white-space:pre-wrap;font-family:'Archivo',sans-serif;font-size:.98rem;line-height:1.65;margin:0}
+.tray{background:#4a4436;padding:18px}
+.tray p{margin:0 0 12px;font-size:.92rem;color:#cfc6ac}
+.reed{display:flex;align-items:center;gap:12px;background:none;border:none;cursor:pointer;color:#ece5d2;font-family:'Archivo',sans-serif;font-size:1rem;padding:8px 0;text-align:left;width:100%}
+.reed .cyl{flex:0 0 64px;height:20px;border-radius:10px;background:linear-gradient(180deg,#c09a5e,#8a6a34);position:relative;transition:filter .15s,transform .1s}
+.reed .cyl::before{content:'';position:absolute;left:5px;top:3px;width:12px;height:12px;border-radius:50%;border:3px solid #241f16;background:transparent;transition:background .15s}
+.reed:hover .cyl{filter:brightness(1.18)}
+.reed:hover .cyl::before{background:#241f16}
+.reed:active .cyl{transform:translateY(2px)}
+a.reed{text-decoration:none}
+.wax{display:inline-block;width:13px;height:13px;border-radius:50%;background:#922c22;margin-left:8px;vertical-align:middle}
+.cord{border:none;border-top:3px solid #6d6248;position:relative;margin:30px 0}
+.cord::before{content:'';position:absolute;left:33%;top:-9px;width:15px;height:15px;border-radius:50%;background:#57503c;border:3px solid #8a7c58}
+.cord.minor{border-top:2px solid #57503c;width:46%;margin:24px auto}
+.cord.minor::before{display:none}
+.cubby{background:#4a4436;padding:6px;margin:16px 0}
+.cubby .in{background:#f4eedc;color:#2c2820;padding:16px 20px;position:relative}
+.cubby .in p{margin:.3em 0}
+.note{max-width:70ch}
+a{color:#d8b878;text-decoration:none;position:relative}
+a:hover{color:#e8cfa0}
+footer{max-width:1020px;margin:0 auto;padding:6px 22px 42px;color:#b6ac90}
+.rolls{display:flex;gap:10px;margin:12px 0}
+.rolls i{flex:0 0 54px;height:26px;border-radius:13px;background:#e6dcc0;position:relative}
+.rolls i::after{content:'';position:absolute;right:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #a89a76}
+.shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.shots img{width:100%;height:auto;background:#f4f1e8;display:block}
 </style>
 </head>
-<body class="layout-term">
-<!-- This page exists for MIT-License-Host alone: the layout (terminal-frame),
-     the colors, and the type were picked for this project, not
-     shared with the other project pages. The code block below is
-     copied from the file it names, line for line. If it looks
-     plain, that is because the project is plain, and I would
-     rather the page match the project than dress it up. The one
-     thing I will not do here is oversell: what this project does
-     not do is stated on the page, not hidden from it. -->
-<header class="hero">
-  <img class="logo" src="assets/logo.png" alt="MIT License Host logo">
-  <img class="banner" src="assets/banner.png" alt="">
-  <h1>MIT License Host</h1>
-  <p class="mono"><a href="https://github.com/Epsilon0xCell/MIT-License-Host">github.com/Epsilon0xCell/MIT-License-Host</a></p>
+<body>
+<header>
+<img src="assets/banner.png" alt="The records office counter with the name painted on its front">
+<h1>MIT-License-Host</h1>
+<p>One licence, kept on the desk, ready to be taken away and used.</p>
 </header>
-
 <main>
-  <section class="rail">
-    <nav aria-label="on this page">
-      <p class="mono"><a href="#run">Run it</a><br>
-      <a href="#files">The files</a><br>
-      <a href="#sheets">The sheets</a><br>
-      <a href="https://github.com/Epsilon0xCell/MIT-License-Host">The repo</a></p>
-    </nav>
-    <div>
-      <p class="lede">MIT License Host is one of my projects. The README in the repo is short, so this page sticks to what the files themselves show.</p>
-      <div class="grid">
-        <div class="card pop"><h3>What it is</h3>
-          <p>MIT License Host: 4 files, 4 counted
-          lines across Markdown 4. One job, done in the
-          open, in files you can read.</p></div>
-        <div class="card pop"><h3>The biggest piece</h3>
-          <p><code>README.md</code> carries the most
-          lines. If the project grows, that file is where the growth
-          lands first, for better or worse.</p></div>
-        <div class="card pop"><h3>The honest gap</h3>
-          <p>No test files yet. That is the honest gap, and the roadmap in the visuals folder says what the first one should cover.</p></div>
-      </div>
-      <section id="run">
-        <h2>Run it</h2>
-        <p>The repo README has the exact commands for this one. The
-        shape is the shape for most of my projects: clone it, read the
-        top file first so you know what will happen, then run it on
-        something you do not mind breaking.</p>
-        <p class="mono">$ git clone https://github.com/Epsilon0xCell/MIT-License-Host.git<br>$ cd MIT-License-Host</p>
-      </section>
-      
-  <section aria-label="real code">
-    <h2>The code, as it sits in the repo</h2>
-    <p>From <code>README.md</code>, line 1 on. I did
-    not tidy it for the page. What you see is what the file has.</p>
-    <pre class="code"><code>![Banner](banner.png)
+<div class="desk">
+<section class="sheet" aria-label="The MIT licence, in full">
+<pre id="licence">MIT License
 
-# MIT-License-Host
-This repository hosts the MIT license</code></pre>
-  </section>
-      <section id="files">
-        <h2>The files that matter</h2>
-        <table><tr><th>File</th><th>Lines</th></tr>
-        <tr><td><code>README.md</code></td><td>4</td></tr>
-        <tr><td><code>banner.png</code></td><td>0</td></tr>
-        <tr><td><code>logo.png</code></td><td>0</td></tr>
-        <tr><td><code>LICENSE</code></td><td>0</td></tr>
-        </table>
-        <p>Names doing the work: <span class="mono">no named functions in the snapshot</span>.</p>
-      </section>
-      <section id="sheets">
-        <h2>Drawn by hand</h2>
-        <p>I sketch my projects on notebook paper so I have to
-        understand them well enough to draw them. The full set,
-        with the counts and how they were counted, is the
-        <a href="https://github.com/Epsilon0xCell/MIT-License-Host/tree/main/MIT-License-Host-Visuals">MIT-License-Host-Visuals</a>
-        folder in the repo. Nothing is drawn over the binder holes.
-        That is a rule, not a style.</p>
-        <div class="shots">
-          <img src="assets/architecture.png" alt="Hand drawn architecture sheet for MIT License Host">
-          <img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for MIT License Host">
-          <img src="assets/product-map.png" alt="Hand drawn product map sheet for MIT License Host">
-        </div>
-      </section>
-    </div>
-  </section>
+Copyright (c) 2023 Gavin K (@Epsilon0xCell)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.</pre>
+</section>
+<aside class="tray" aria-label="Copying tray">
+<p>The tray. Everything on it does one plain thing.</p>
+<button class="reed" id="copyBtn" type="button"><span class="cyl"></span>Copy the licence</button>
+<button class="reed" id="dlBtn" type="button"><span class="cyl"></span>Download it as a text file<span class="wax" aria-hidden="true"></span></button>
+<a class="reed" href="https://raw.githubusercontent.com/Epsilon0xCell/MIT-License-Host/main/LICENSE"><span class="cyl"></span>Read the raw file</a>
+<a class="reed" href="https://github.com/Epsilon0xCell/MIT-License-Host"><span class="cyl"></span>The repo on GitHub</a>
+<p id="done" role="status"></p>
+</aside>
+</div>
+<hr class="cord">
+<section class="note">
+<h2>A note from the clerk</h2>
+<p>This page exists for one errand: it keeps one canonical copy of the MIT licence in one known place, so the text can be pointed at, fetched, and reused without hunting through old projects. The sheet above is the whole of what the repo holds, shown exactly as the file in the repo reads.</p>
+<p>It is not legal advice, not a licence chooser, and not a generator with options. The repo ships one fixed text and no code at all, and this desk offers that text three ways: read it here, copy it, or take the file away.</p>
+</section>
+<hr class="cord minor">
+<section>
+<h2>The hand drawn sheets</h2>
+<div class="cubby"><div class="in">
+<p>The repo also keeps a set of hand drawn sheets in its <a href="https://github.com/Epsilon0xCell/MIT-License-Host/tree/main/MIT-License-Host-Visuals">MIT-License-Host-Visuals</a> folder. Three of them sit in this cubby.</p>
+<div class="shots">
+<img src="assets/architecture.png" alt="Hand drawn architecture sheet for MIT License Host">
+<img src="assets/flowchart.png" alt="Hand drawn flowchart sheet for MIT License Host">
+<img src="assets/product-map.png" alt="Hand drawn product map sheet for MIT License Host">
+</div>
+</div></div>
+</section>
 </main>
 <footer>
-  <p>MIT License Host is one of my projects. This page was written
-  from the repo itself on 2026-10-30: the counts are the
-  repo's counts, the code is the repo's code, and the gaps are the
-  repo's gaps.</p>
+<div class="rolls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<p>MIT-License-Host, kept in the records office. The licence text above is reproduced whole, including its copyright line, as the licence itself requires. Fonts: Bad Script and Archivo, both SIL Open Font License 1.1, license texts beside the font files.</p>
 </footer>
+<script>
+var t=document.getElementById('licence').textContent;
+document.getElementById('copyBtn').addEventListener('click',function(){
+  navigator.clipboard.writeText(t).then(function(){document.getElementById('done').textContent='Copied. The sheet is yours to use.';});
+});
+document.getElementById('dlBtn').addEventListener('click',function(){
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([t],{type:'text/plain'}));
+  a.download='LICENSE';a.click();URL.revokeObjectURL(a.href);
+  document.getElementById('done').textContent='Downloaded as LICENSE.';
+});
+</script>
 </body>
 </html>
