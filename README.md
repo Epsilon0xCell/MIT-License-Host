@@ -1,9 +1,11 @@
-![Intro: the records office at dawn, a blank sheet weighted flat and the ink not yet mixed](intro-banner.png)
+![Intro: a sealed parchment sheet handed across a dark desk toward a waiting blank sheet, its red wax seal and gold cord catching the candle light, the brass stamp resting behind it](intro-banner.png)
 
 
 # MIT-License-Host
 
-![Banner](banner.png)
+<p align="center"><img src="logo.png" alt="MIT-License-Host logo: a round red wax seal at macro range on cream parchment, its face embossed with a plain open book, a gold cord looped through its top and soot flecks at its edges" width="200"></p>
+
+![Banner: a parchment sheet on a dark desk, a glossy red wax seal with an embossed open book pressed at its lower corner, the brass stamp resting on its side beside it and a gold cord trailing off the page, soot and candle glow at the edges](banner.png)
 
 ![Scene](scene.svg)
 
