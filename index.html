@@ -3,56 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MIT-License-Host: the copying desk</title>
-<meta name="description" content="One canonical copy of the MIT licence, kept on a desk where anyone can read it, copy it, or download it.">
+<title>MIT-License-Host: the sealed sheet</title>
+<meta name="description" content="One canonical copy of the MIT licence, kept under the seal where anyone can read it, copy it, or download it.">
 <style>
-@font-face{font-family:'Bad Script';src:url('fonts/BadScript-Regular.ttf') format('truetype')}
-@font-face{font-family:'Archivo';src:url('fonts/Archivo-Regular.ttf') format('truetype')}
+@font-face{font-family:'Pinyon Script';src:url('fonts/PinyonScript-Regular.ttf') format('truetype')}
+@font-face{font-family:'Gentium Book Plus';src:url('fonts/GentiumBookPlus-Regular.ttf') format('truetype');font-weight:400}
+@font-face{font-family:'Gentium Book Plus';src:url('fonts/GentiumBookPlus-Bold.ttf') format('truetype');font-weight:700}
 *{box-sizing:border-box}
-body{margin:0;background:#3d3a30;color:#ece5d2;font-family:'Archivo',sans-serif;line-height:1.6}
+body{margin:0;background:#ece1c6;color:#2c2118;font-family:'Gentium Book Plus',serif;line-height:1.65;font-size:17px}
 header{max-width:1020px;margin:0 auto;padding:36px 22px 4px}
-header img{width:100%;height:auto;display:block}
-h1,h2{font-family:'Bad Script',cursive;font-weight:400;color:#f0e9d6}
-h1{font-size:2rem;margin:18px 0 2px}
-h2{font-size:1.5rem;margin:0 0 10px}
+header img{width:100%;height:auto;display:block;border:3px solid #922c22}
+h1,h2{font-family:'Pinyon Script',cursive;font-weight:400;color:#5f1d16}
+h1{font-size:2.7rem;margin:18px 0 2px}
+h2{font-size:2rem;margin:0 0 10px}
 main{max-width:1020px;margin:0 auto;padding:10px 22px 30px}
 .desk{display:grid;grid-template-columns:1fr 240px;gap:22px;align-items:start}
 @media(max-width:760px){.desk{grid-template-columns:1fr}}
-.sheet{background:#f4eedc;color:#2c2820;padding:30px 34px;border-top:6px solid #2f4a34}
-.sheet pre{white-space:pre-wrap;font-family:'Archivo',sans-serif;font-size:.98rem;line-height:1.65;margin:0}
-.tray{background:#4a4436;padding:18px}
-.tray p{margin:0 0 12px;font-size:.92rem;color:#cfc6ac}
-.reed{display:flex;align-items:center;gap:12px;background:none;border:none;cursor:pointer;color:#ece5d2;font-family:'Archivo',sans-serif;font-size:1rem;padding:8px 0;text-align:left;width:100%}
-.reed .cyl{flex:0 0 64px;height:20px;border-radius:10px;background:linear-gradient(180deg,#c09a5e,#8a6a34);position:relative;transition:filter .15s,transform .1s}
-.reed .cyl::before{content:'';position:absolute;left:5px;top:3px;width:12px;height:12px;border-radius:50%;border:3px solid #241f16;background:transparent;transition:background .15s}
+.sheet{background:#f8f2df;color:#2c2118;padding:30px 34px;border-top:6px solid #922c22;box-shadow:0 2px 0 #d8c9a2}
+.sheet pre{white-space:pre-wrap;font-family:'Gentium Book Plus',serif;font-size:.98rem;line-height:1.65;margin:0}
+.tray{background:#e2d3ac;padding:18px}
+.tray p{margin:0 0 12px;font-size:.95rem;color:#5c4c30}
+.reed{display:flex;align-items:center;gap:12px;background:none;border:none;cursor:pointer;color:#2c2118;font-family:'Gentium Book Plus',serif;font-weight:700;font-size:1rem;padding:8px 0;text-align:left;width:100%}
+.reed .cyl{flex:0 0 64px;height:20px;border-radius:10px;background:linear-gradient(180deg,#d8b878,#8a6a34);position:relative;transition:filter .15s,transform .1s}
+.reed .cyl::before{content:'';position:absolute;left:5px;top:3px;width:12px;height:12px;border-radius:50%;border:3px solid #5f1d16;background:transparent;transition:background .15s}
 .reed:hover .cyl{filter:brightness(1.18)}
-.reed:hover .cyl::before{background:#241f16}
+.reed:hover .cyl::before{background:#922c22}
 .reed:active .cyl{transform:translateY(2px)}
 a.reed{text-decoration:none}
 .wax{display:inline-block;width:13px;height:13px;border-radius:50%;background:#922c22;margin-left:8px;vertical-align:middle}
-.cord{border:none;border-top:3px solid #6d6248;position:relative;margin:30px 0}
-.cord::before{content:'';position:absolute;left:33%;top:-9px;width:15px;height:15px;border-radius:50%;background:#57503c;border:3px solid #8a7c58}
-.cord.minor{border-top:2px solid #57503c;width:46%;margin:24px auto}
+.cord{border:none;border-top:3px solid #b08d3e;position:relative;margin:30px 0}
+.cord::before{content:'';position:absolute;left:33%;top:-9px;width:15px;height:15px;border-radius:50%;background:#922c22;border:3px solid #b08d3e}
+.cord.minor{border-top:2px solid #b08d3e;width:46%;margin:24px auto}
 .cord.minor::before{display:none}
-.cubby{background:#4a4436;padding:6px;margin:16px 0}
-.cubby .in{background:#f4eedc;color:#2c2820;padding:16px 20px;position:relative}
+.cubby{background:#e2d3ac;padding:6px;margin:16px 0}
+.cubby .in{background:#f8f2df;color:#2c2118;padding:16px 20px;position:relative}
 .cubby .in p{margin:.3em 0}
 .note{max-width:70ch}
-a{color:#d8b878;text-decoration:none;position:relative}
-a:hover{color:#e8cfa0}
-footer{max-width:1020px;margin:0 auto;padding:6px 22px 42px;color:#b6ac90}
+a{color:#7c2418;text-decoration:none;position:relative}
+a:hover{color:#922c22}
+footer{max-width:1020px;margin:0 auto;padding:6px 22px 42px;color:#6d5c3a}
 .rolls{display:flex;gap:10px;margin:12px 0}
-.rolls i{flex:0 0 54px;height:26px;border-radius:13px;background:#e6dcc0;position:relative}
-.rolls i::after{content:'';position:absolute;right:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #a89a76}
+.rolls i{flex:0 0 54px;height:26px;border-radius:13px;background:#e8dcc0;position:relative}
+.rolls i::after{content:'';position:absolute;right:6px;top:6px;width:12px;height:12px;border-radius:50%;border:2px solid #b08d3e}
 .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
-.shots img{width:100%;height:auto;background:#f4f1e8;display:block}
+.shots img{width:100%;height:auto;background:#f8f2df;display:block}
 </style>
 </head>
 <body>
 <header>
-<img src="assets/banner.png" alt="The records office counter with the name painted on its front">
+<img src="assets/banner.png" alt="A parchment sheet on a dark desk, a glossy red wax seal with an embossed open book pressed at its lower corner, the brass stamp resting on its side beside it and a gold cord trailing off the page, candle glow at the edge">
 <h1>MIT-License-Host</h1>
-<p>One licence, kept on the desk, ready to be taken away and used.</p>
+<p>One licence, pressed under the seal, ready to be taken away and used.</p>
 </header>
 <main>
 <div class="desk">
@@ -92,7 +93,7 @@ SOFTWARE.</pre>
 <section class="note">
 <h2>A note from the clerk</h2>
 <p>This page exists for one errand: it keeps one canonical copy of the MIT licence in one known place, so the text can be pointed at, fetched, and reused without hunting through old projects. The sheet above is the whole of what the repo holds, shown exactly as the file in the repo reads.</p>
-<p>It is not legal advice, not a licence chooser, and not a generator with options. The repo ships one fixed text and no code at all, and this desk offers that text three ways: read it here, copy it, or take the file away.</p>
+<p>It is not legal advice, not a licence chooser, and not a generator with options. The repo ships one fixed text and no code at all, and this seal offers that text three ways: read it here, copy it, or take the file away.</p>
 </section>
 <hr class="cord minor">
 <section>
@@ -109,7 +110,7 @@ SOFTWARE.</pre>
 </main>
 <footer>
 <div class="rolls" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
-<p>MIT-License-Host, kept in the records office. The licence text above is reproduced whole, including its copyright line, as the licence itself requires. Fonts: Bad Script and Archivo, both SIL Open Font License 1.1, license texts beside the font files.</p>
+<p>MIT-License-Host, kept under the seal. The licence text above is reproduced whole, including its copyright line, as the licence itself requires. Fonts: Pinyon Script for display and Gentium Book Plus for text, both SIL Open Font License 1.1, self-hosted, license texts beside the font files.</p>
 </footer>
 <script>
 var t=document.getElementById('licence').textContent;
